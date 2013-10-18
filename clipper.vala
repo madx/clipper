@@ -1,6 +1,6 @@
 using Gtk;
 
-namespace Valapad {
+namespace Clipper {
   class ClipperApp : Gtk.Window {
 
     private Gtk.TextView text_view;
