@@ -7,12 +7,13 @@ namespace Clipper {
 
     public ClipperApp() {
       set_default_size(400, 260);
+      set_position(Gtk.WindowPosition.MOUSE);
+      set_type_hint(Gdk.WindowTypeHint.UTILITY);
       var scrolled   = new Gtk.ScrolledWindow(null, null);
-      var mono_font = Pango.FontDescription.from_string("monospace");
       this.text_view = new TextView();
 
       this.text_view.set_wrap_mode(Gtk.WrapMode.WORD);
-      this.text_view.override_font(mono_font);
+      this.text_view.set_monospace(true);
       set_text_from_clipboard();
 
       scrolled.add(text_view);
